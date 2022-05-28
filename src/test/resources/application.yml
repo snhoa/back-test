@@ -1,4 +1,4 @@
-# TEST
+# Test
 spring:
   profiles:
     active: local # 기본 환경 선택
@@ -6,6 +6,9 @@ spring:
 # local 환경
 ---
 spring:
-  profiles: local
-    jpa:
-      show-sql: true;
+  main:
+    allow-circular-references: true
+  profiles:
+    active: local
+  jpa:
+    show-sql: true
